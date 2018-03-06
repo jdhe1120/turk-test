@@ -30,4 +30,4 @@ with open("trial1.csv", "w") as file:
             feature_num = int(feature_names[i][-1:])
             feature_val = feature_data[i]
             row[feature_num - 1] = feature_val
-        writer.writerow(row + [rec, ans])
+        writer.writerow(row + [ans, rec])
