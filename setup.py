@@ -18,7 +18,7 @@ with open("trial1.csv", "w") as file:
     writer = csv.writer(file)
     features = ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"]
 
-    writer.writerow(features + ["ans", "rec"])
+    writer.writerow(features + ["rec", "ans"])
     for datapoint in lst:
         feature_data = datapoint[0]
         feature_names = datapoint[1] 
@@ -30,4 +30,4 @@ with open("trial1.csv", "w") as file:
             feature_num = int(feature_names[i][-1:])
             feature_val = feature_data[i]
             row[feature_num - 1] = feature_val
-        writer.writerow(row + [ans, rec])
+        writer.writerow(row + [rec, ans])
